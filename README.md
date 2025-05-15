@@ -97,6 +97,9 @@ sudo make install
 
 можем радоватся библиотека у нас и она установлена в систему
 
+если у вас возникнут трудности с компиляцией и у вас debian linux то можете скачать архив 
+
+tkhtml3-lib_bin.tar распаковать его и вручную скопировать эти библиотеки по пути `/usr/lib/Tkhtml3.0/`
 
 всё теперь шаги по установки библиотек для markdown viewer закончены, немного заморочено но поверьте это стоит того
 
@@ -106,7 +109,8 @@ sudo make install
 
 Debian/Ubuntu:
 ```bash
-sudo apt-get install tcl tk xsel
+sudo apt-get install tcl tk xsel tcl-tls libtk-img
+
 ```
 
 ## Использование
@@ -115,6 +119,7 @@ sudo apt-get install tcl tk xsel
 ```bash
 ./l_te-marcus.sh 
 ```
+
 запускает скрипт te_marcus_22-next.tcl -- sh скрипт полезен для desktop файла
 
 необходимо отредактировать под своего пользователя и путь откуда запускаетя `te_marcus_22-next.tcl`
