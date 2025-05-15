@@ -1,8 +1,9 @@
 #!/bin/bash
+#set -x
 
 # Исправте путь до своего каталога куда вы распаковали архив с дистрибутвом marcus
 
-cd /home/live/DEV/FOR_PUBLICATIONS-marcus-ted2+-09-05-25/Marcus
+cd /home/live/.local/bin/marcus
 
 # Проверка наличия xsel
 if ! command -v xsel &> /dev/null; then
@@ -18,11 +19,7 @@ if [[ -z "$file_path" ]]; then
     exit 1
 fi
 
-# Проверка, что путь существует и является файлом
-if [[ ! -f "$file_path" ]]; then
-    echo "Ошибка: '$file_path' не является файлом или не существует."
-    exit 1
-fi
+
 
 # Проверка, что файл имеет расширение .md
 if [[ ! "$file_path" =~ \.md$ ]]; then
@@ -31,3 +28,4 @@ fi
 
 # Запуск marcus.py с путем файла
 wish ./marcus_w6.tcl "$file_path"
+
